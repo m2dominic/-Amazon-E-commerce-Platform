@@ -22,15 +22,46 @@ Singleton Pattern - For configuration and driver management
 Decorator Pattern - For logging, retry mechanisms, and error handling
 Factory Pattern - For driver creation based on browser type
 
-Core Components
-1. Page Layer (src/pages/)
-BasePage (Abstract Base Class)
-├── HomePage - Search functionality, navigation
-├── LoginPage - Authentication flows
-├── SearchResultsPage - Product listing and filtering
-├── ProductDetailsPage - Product information display
-├── CartPage - Shopping cart management
-└── CheckoutPage - Order processing
+amazon-automation-framework/
+├── src/
+│   ├── pages/
+│   │   ├── __init__.py
+│   │   ├── base_page.py
+│   │   ├── home_page.py
+│   │   ├── login_page.py
+│   │   ├── search_results_page.py
+│   │   ├── product_details_page.py
+│   │   ├── cart_page.py
+│   │   └── checkout_page.py
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── config_manager.py
+│   │   ├── driver_manager.py
+│   │   ├── element_utils.py
+│   │   ├── wait_utils.py
+│   │   └── test_data_manager.py
+│   ├── constants/
+│   │   ├── __init__.py
+│   │   ├── framework_constants.py
+│   │   └── locators.py
+│   └── __init__.py
+├── tests/
+│   ├── __init__.py
+│   ├── conftest.py
+│   ├── test_login.py
+│   ├── test_search.py
+│   ├── test_cart.py
+│   └── test_checkout.py
+├── config/
+│   ├── config.ini
+│   └── test_data.json
+├── reports/
+├── screenshots/
+├── logs/
+├── requirements.txt
+├── pytest.ini
+└── README.md
+
 2. Utility Layer (src/utils/)
 
 DriverManager - WebDriver lifecycle management with webdriver-manager integration
