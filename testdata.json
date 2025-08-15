@@ -1,0 +1,65 @@
+{
+  "loginData": {
+    "validUser": {
+      "email": "testuser@example.com",
+      "password": "TestPassword123!"
+    },
+    "invalidUser": {
+      "email": "invalid@test.com", 
+      "password": "wrongpassword"
+    },
+    "emptyCredentials": {
+      "email": "",
+      "password": ""
+    }
+  },
+  "searchData": {
+    "validSearches": [
+      {
+        "keyword": "laptop",
+        "category": "Electronics",
+        "expectedResultsCount": 50
+      },
+      {
+        "keyword": "iPhone",
+        "category": "Cell Phones",
+        "expectedResultsCount": 20
+      }
+    ],
+    "invalidSearches": [
+      {
+        "keyword": "xyzabc123nonexistent",
+        "expectedMessage": "No results found"
+      }
+    ]
+  },
+  "productData": {
+    "sampleProducts": [
+      {
+        "name": "MacBook Pro",
+        "price": 1299.99,
+        "category": "Computers",
+        "inStock": true
+      }
+    ]
+  },
+  "userProfiles": {
+    "standardUser": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "address": {
+        "street": "123 Test Street",
+        "city": "Test City",
+        "state": "CA",
+        "zipCode": "12345",
+        "country": "United States"
+      },
+      "paymentInfo": {
+        "cardNumber": "4111111111111111",
+        "expiryMonth": "12",
+        "expiryYear": "2025",
+        "cvv": "123"
+      }
+    }
+  }
+}
